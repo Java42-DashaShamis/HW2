@@ -36,6 +36,8 @@ public class PrimitivesInformationAppl {
 			case "byte":
 				printByteInformation();
 				break;
+				// V.R. It is more clear to show which type is wrong. Like following:
+				// System.out.printf("Wrong primitive type=%s", type);
 			default: System.out.println("Wrong primitive type!");
 		}
 		
@@ -51,7 +53,11 @@ public class PrimitivesInformationAppl {
 			minValue = (byte)(minValue * 2); 
 			nBits = nBits + 1;
 		}
+		// V.R. It is possible to join declaration and initialisation of maxValue.
+		// byte maxValue = (byte)(minValue - 1);
 		maxValue = (byte)(minValue - 1);
+		// V.R. It is not bad idea to write before
+		// System.out.println("byte:\n");
 		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n", (int)minValue, (int)maxValue, nBits / 8);
 	}
 
